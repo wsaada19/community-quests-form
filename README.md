@@ -1,6 +1,6 @@
 # **Community Quests Config Form**
 
-A form that can be used to help build quest configurations for the https://www.spigotmc.org/resources/community-quests-1-16-1-21-%E2%AD%90run-server-wide-quests-%E2%AD%90.90798/. See more information on the plugin and how the configuration setup works here: https://github.com/wsaada19/CommunityQuests?tab=readme-ov-file#Configuration.
+A form that can be used to help build quest configurations for the [Community Quests Spigot Plugin](https://www.spigotmc.org/resources/community-quests-1-16-1-21-%E2%AD%90run-server-wide-quests-%E2%AD%90.90798/.) More information on the plugin and how the configuration setup works can be [found here](https://github.com/wsaada19/CommunityQuests?tab=readme-ov-file#Configuration.).
 
 Built this application to practice using react-hook-form and sst for deploying.
 
