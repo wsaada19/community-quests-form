@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "target": "ES2021",
+    "lib": ["ES2021"],
+    "paths": {
+      "@community-quests-form/core/*": ["../core/src/*"],
+      "@community-quests-form/types/*": ["../core/src/types/*"]
+    }
+  }
+}

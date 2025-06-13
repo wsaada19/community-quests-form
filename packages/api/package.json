@@ -1,0 +1,11 @@
+{
+  "name": "@community-quests-form/api",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "tsx watch index.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "sst": "0.1.17"
+  }
+}

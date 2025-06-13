@@ -1,0 +1,16 @@
+{
+  "name": "@community-quests-form/core",
+  "version": "0.0.0",
+  "exports": {
+    "./*": [
+      "./src/*/index.ts",
+      "./src/*.ts"
+    ]
+  },
+  "devDependencies": {
+    "sst": "0.1.17"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}

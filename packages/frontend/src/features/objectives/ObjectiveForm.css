@@ -1,0 +1,72 @@
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.objective-row {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.objective-row.with-constraints {
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.objective-row.without-constraints {
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.objective-row .first-row {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    gap: 12px;
+    align-items: center;
+}
+
+.objective-row .second-row {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    gap: 12px;
+    align-items: center;
+}
+
+.objective-row .clear-icon {
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.objective-row .clear-icon:hover {
+    background-color: #e0e0e0;
+    color: #d32f2f;
+}
+
+.rewards {
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr .25fr;
+    row-gap: 12px;
+}
+
+.threshold {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

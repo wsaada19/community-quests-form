@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "exclude": ["packages"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@quest-base/types/*": ["./packages/core/types/*"],
+      "@quest-base/core/*": ["./packages/core/src/*"],
+      "@quest-base/db": ["./packages/dynamoDB/src/index.ts"]
+    }
+  }
+}
