@@ -32,19 +32,19 @@ export function CreateQuestPage() {
   const [showSnack, setShowSnack] = useState(false);
   const [showErrorSnack, setShowErrorSnack] = useState(false);
 
-  // useEffect(() => {
-  //   const incentive = localStorage.getItem("incentive");
-  //   if (incentive) {
-  //     Object.keys(JSON.parse(incentive)).forEach((key) => {
-  //       if (key === "startDate" || key === "endDate") {
-  //         setValue(key as keyof IncentiveForm, new Date(JSON.parse(incentive)[key]));
-  //       } else {
-  //         console.log(key, JSON.parse(incentive)[key]);
-  //         setValue(key as keyof IncentiveForm, JSON.parse(incentive)[key]);
-  //       }
-  //     });
-  //   }
-  // }, []);
+  useEffect(() => {
+    const savedConfig = localStorage.getItem("questConfig");
+    if (savedConfig) {
+      const parsedConfig = JSON.parse(savedConfig);
+      setValue("id", parsedConfig.id);
+      setValue("name", parsedConfig.name);
+      setValue("displayItem", parsedConfig.displayItem);
+      setValue("worlds", parsedConfig.worlds);
+      setValue("duration", parsedConfig.duration);
+      setValue("objectives", parsedConfig.objectives);
+      setValue("rewards", parsedConfig.rewards);
+    }
+  }, []);
 
   useEffect(() => {
     // For debugging
@@ -55,6 +55,9 @@ export function CreateQuestPage() {
     console.log(data);
     confetti();
     localStorage.setItem("questConfig", JSON.stringify(data));
+    const savedConfigs = JSON.parse(localStorage.getItem("savedConfigs") || "[]");
+    const filteredConfigs = savedConfigs.filter((config: QuestConfig) => config.id !== data.id);
+    localStorage.setItem("savedConfigs", JSON.stringify([...filteredConfigs, data]));
   };
 
   return (

@@ -112,6 +112,7 @@ export function parseQuestConfig(yamlString: string): Partial<QuestConfig> {
 
     return config;
   } catch (err) {
-    throw new Error(`Failed to parse quest config: ${err instanceof Error ? err.message : String(err)}`);
+    console.error(err);
+    throw new Error(`Failed to parse quest config, make sure the config is valid. Only post a single config at once.`);
   }
 } 

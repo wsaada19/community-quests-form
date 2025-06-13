@@ -21,7 +21,7 @@ function QuestConfig({ control }: { control: Control<QuestConfigType> }) {
         padding={10}
         style={{
           fontFamily: '"Fira code", "Fira Mono", monospace',
-          fontSize: 12,
+          fontSize: 14,
         }}
       />
       <Button size="small" variant="contained" color="primary" onClick={() => {
