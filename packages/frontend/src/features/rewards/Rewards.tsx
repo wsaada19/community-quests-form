@@ -1,4 +1,4 @@
-import { Button, MenuItem, Select, TextField, Typography } from "@mui/material";
+import { Button, MenuItem, Select, TextField, Tooltip, Typography } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 
 import "../objectives/ObjectiveForm.css";
@@ -59,14 +59,16 @@ export function Rewards({ control }: RewardsProps) {
             control={control}
             name="rewards.rewardsLimit"
             render={({ field }) => (
+              <Tooltip title="This is the lowest rank someone can achieve that will receive rewards. Useful when setting rewards for all memebers.">
               <TextField
                 type="number"
                 size="small"
-                label="Maximum Rewards"
+                label="Rewards Limit"
                 value={field.value || ""}
                 onChange={(e) => field.onChange(e.target.value ? Number(e.target.value) : undefined)}
                 sx={{ width: "100%" }}
               />
+               </Tooltip>
             )}
           />
         </div>
