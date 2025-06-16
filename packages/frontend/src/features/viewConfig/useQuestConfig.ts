@@ -91,7 +91,7 @@ export function useQuestConfig({ control }: UseQuestConfigProps) {
             watchedValue.rewards.rankedRewards
               .map((reward) => {
                 const rewardLines = [
-                  `        '${reward.rank}':`,
+                  `        "${reward.rank}":`,
                   reward.experience ? `        experience: ${reward.experience}` : null,
                   reward.money ? `        money: ${reward.money}` : null,
                   reward.commands?.length ? `        commands:\n${getCommands(reward.commands).split('\n').map(line => `          ${line.trim()}`).join('\n')}` : null,

@@ -120,12 +120,12 @@ export function Objective({ index, removeObjective, control }) {
             {hasConstraints && (
               <div className="second-row">
                 {!customName[index] && (
-                  <Select
+                  <TextField
                     id="entity-id"
                     label="Entities"
                     value={field.value.constraints || []}
                     size="small"
-                    multiple
+                    select
                     fullWidth
                     onChange={(event) => {
                       const value = event.target.value;
@@ -142,7 +142,7 @@ export function Objective({ index, removeObjective, control }) {
                           </MenuItem>
                         );
                       })}
-                  </Select>
+                  </TextField>
                 )}
                 {customName[index] && (
                   <TextFieldButton

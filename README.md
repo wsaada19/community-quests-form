@@ -2,7 +2,7 @@
 
 A form that can be used to help build quest configurations for the [Community Quests Spigot Plugin](https://www.spigotmc.org/resources/community-quests-1-16-1-21-%E2%AD%90run-server-wide-quests-%E2%AD%90.90798/.) More information on the plugin and how the configuration setup works can be [found here](https://github.com/wsaada19/CommunityQuests?tab=readme-ov-file#Configuration.).
 
-Built this application to practice using react-hook-form and sst for deploying.
+Built this application to practice using react-hook-form, Material UI and SST for managing infra.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ $ npx sst init --bootstrap   # one‑time per AWS account/region
 $ npx sst dev                # hot‑reload API + Web
 ```
 
-Deploy a stageany time:
+Deploy a stage any time:
 
 ```bash
 npx sst deploy

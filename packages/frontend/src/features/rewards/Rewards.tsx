@@ -51,7 +51,7 @@ export function Rewards({ control }: RewardsProps) {
                 label="Rewards Display"
                 onChange={(values) => field.onChange(values)}
                 sx={{ width: "100%" }}
-                tooltip="This message will be used to display the rewards to the player in the GUIs."
+                tooltip="This list of messages will be used to display the rewards to the player in the GUIs and chat messages."
               />
             )}
           />

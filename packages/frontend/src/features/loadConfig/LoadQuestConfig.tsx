@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-yaml";
 import "prismjs/themes/prism.css";
 import { parseQuestConfig } from "./questConfigParser.ts";
-import { QuestConfig } from "../../types/formSchema";
-import { Control, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
 
 export function LoadQuestConfig() {
@@ -67,7 +66,7 @@ export function LoadQuestConfig() {
         onClick={handleOpen}
         sx={{ marginBottom: 2, float: "right" , display: "inline-block"}}
       > 
-        Load Config
+        Import YAML
       </Button>
       <Dialog 
         open={open} 
